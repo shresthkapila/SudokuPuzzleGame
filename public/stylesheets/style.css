@@ -1,0 +1,25 @@
+table{
+    background-color: darkgray;
+    border-collapse: collapse;
+    width: 40%;
+    position: absolute;
+    
+}
+
+
+td{
+    border: 2px solid black;
+    padding: 0cm;
+
+}
+
+button{
+    background-color: white;
+    color: white;
+    display: inline-block;
+    padding: 14px 28px;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
