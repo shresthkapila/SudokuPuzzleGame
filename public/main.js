@@ -1,55 +1,97 @@
+var flag = false;
+var flag2 = false;
 
 
 document.querySelectorAll('.inactive').forEach(function(e) {
     e.addEventListener('click', function(){
         
-       // console.log(document.getElementsByClassName("inactive").value);
-
         if (this.style.backgroundColor == "white") {
             this.style.backgroundColor = "red";
-            document.getElementsByClassName("inactive").value = "1";
-           // console.log(document.getElementsByClassName("inactive").value);
+            this.innerHTML = "1";
+            console.log(this.innerHTML);
+            check();
         }
         else {
             this.style.backgroundColor = "white";
-            document.getElementsByClassName("inactive").value = "0";
-           // console.log(document.getElementsByClassName("inactive").value);
+            this.innerHTML = "0";
+            console.log(this.innerHTML);
+            check();
         }
     })
 });
 
 document.querySelectorAll('.active').forEach(function(e) {
     e.addEventListener('click', function(){
-
-       // console.log(document.getElementsByClassName("active").value);
-        
-
         if (this.style.backgroundColor == "white") {
             this.style.backgroundColor = "red";
-            document.getElementsByClassName("active").outerHTML = '<button type= "button" onclick="check()" value="1" class="active">';
-          //  console.log(document.getElementsByClassName("active").value);
+            this.innerHTML = "1";
+            console.log(this.innerHTML);
+            check();
         }
         else {
             this.style.backgroundColor = "white";
-            document.getElementsByClassName("active").outerHTML = '<button type= "button" onclick="check()" value="0" class="active">';
-          //  console.log(document.getElementsByClassName("active").value);
+            this.innerHTML = "0";
+            console.log(this.innerHTML);
+            check();
         }
     })
 });
 
 
 function check() {
+    var act = checkAllActive();
+    var inact = checkAllInactive();
 
-    var arr = document.getElementsByClassName('active');
+    // console.log(act);
+    // console.log(inact);
+   
+    if (act == false && inact == false) {
+        console.log("click more to win");
+    } 
+    else if (act == true && inact == true) {
+        console.log("CONGRATULATIONS");
+    }
+    else if (act == true && inact == false) {
+        console.log("check again: reduce some of them to win");
+    }
+    else if (act == false && inact == true) {
+        console.log("check again: some of the correct ones are left");
+    }
 
-    for ( var i = 0; i < arr.length; i++) {
-        if (arr[i].value == "1") {
-            console.log("yes");
+    return;   
+}
 
+
+function checkAllActive() {
+    var allActiveButtons = document.getElementsByClassName('active');
+
+    for (var i = 0; i < allActiveButtons.length; i++) {
+        if (allActiveButtons[i].innerHTML == 1) {
+            flag = true;
         }
         else {
-            console.log("no");
-            console.log(arr[i]);
+            flag = false;
+            break;
         }
     }
+    return flag;
+}
+
+function checkAllInactive() {
+
+    var allInactiveButtons = document.getElementsByClassName('inactive');
+    for (var i = 0; i < allInactiveButtons.length; i++) {
+        // console.log("inax");
+        // console.log(allInactiveButtons[i].innerHTML);
+        if (allInactiveButtons[i].innerHTML == 0) {
+            flag2 = true;
+        }
+        else {
+            flag2 = false;
+            // console.log("no");
+            break;
+        }
+    }
+
+    return flag2;
 }
