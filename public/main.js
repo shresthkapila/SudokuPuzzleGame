@@ -1,20 +1,19 @@
+// global variable
 var flag = false;
 var flag2 = false;
 
-
 document.querySelectorAll('.inactive').forEach(function(e) {
     e.addEventListener('click', function(){
-        
         if (this.style.backgroundColor == "white") {
-            this.style.backgroundColor = "#009999";
+            this.style.backgroundColor = "red";
+            this.style.color = "red";
             this.innerHTML = "1";
-            console.log(this.innerHTML);
             check();
         }
         else {
             this.style.backgroundColor = "white";
+            this.style.color = "white"
             this.innerHTML = "0";
-            console.log(this.innerHTML);
             check();
         }
     })
@@ -23,20 +22,19 @@ document.querySelectorAll('.inactive').forEach(function(e) {
 document.querySelectorAll('.active').forEach(function(e) {
     e.addEventListener('click', function(){
         if (this.style.backgroundColor == "white") {
-            this.style.backgroundColor = "#009999";
+            this.style.backgroundColor = "red";
+            this.style.color = "red";
             this.innerHTML = "1";
-            console.log(this.innerHTML);
             check();
         }
         else {
             this.style.backgroundColor = "white";
+            this.style.color = "white"
             this.innerHTML = "0";
-            console.log(this.innerHTML);
             check();
         }
     })
 });
-
 
 function check() {
     var act = checkAllActive();
@@ -57,7 +55,6 @@ function check() {
     else {
         document.getElementById('message').innerHTML = "Nice!! Keep going";
     }
-
     return;   
 }
 
@@ -68,7 +65,6 @@ function checkAllActive() {
     for (var i = 0; i < allActiveButtons.length; i++) {
         if (allActiveButtons[i].innerHTML == 1) {
             flag = true;
-
         }
         else {
             flag = false;
@@ -79,7 +75,6 @@ function checkAllActive() {
 }
 
 function checkAllInactive() {
-
     var allInactiveButtons = document.getElementsByClassName('inactive');
     for (var i = 0; i < allInactiveButtons.length; i++) {
         if (allInactiveButtons[i].innerHTML == 0) {
@@ -90,12 +85,10 @@ function checkAllInactive() {
             break;
         }
     }
-
     return flag2;
 }
 
 function refreshPage() {
-
     window.location.reload();
         // document.querySelectorAll('.inactive').forEach(function(e) {
         //     var allInactiveButtons = document.getElementsByClassName('inactive');
@@ -144,23 +137,19 @@ function refreshPage() {
     }
 
 
-    function openCity(evt, cityname) {
-        // Declare all variables
-        var i, tabcontent, tablinks;
-      
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-      
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-      
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(cityname).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
+function manageNavs(evt, cityname) {
+    var i, tabcontent, tablinks;
+    
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    
+    document.getElementById(cityname).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
