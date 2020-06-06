@@ -1,25 +1,119 @@
 table{
     background-color: darkgray;
     border-collapse: collapse;
-    width: 40%;
-    position: absolute;
-    
+    width: 100%;
+    table-layout: auto;
 }
 
+body {
+    overflow-y: auto;
+}
 
 td{
     border: 2px solid black;
-    padding: 0cm;
-
+    padding:0px;
+    width: 5%;
 }
 
 button{
     background-color: white;
     display: inline-block;
-    padding: 14px 28px;
+    padding: 10px 10px;
     height: 100%;
     width: 100%;
     border: none;
     color:black;
 }
 
+#back{
+    position: fixed;
+}
+
+#reveal{
+    background-color: red;
+    color: black;
+    border: 2px solid black;
+    padding: 1px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 50%;
+}
+
+#reveal:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#reset {
+    background-color: red;
+    color: black;
+    border: 2px solid black;
+    padding: 1px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 50%;
+}
+
+#reset:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover{
+   background-color: #009999;
+}
+
+.num {
+    font-size: 12px;
+    text-align: center;
+    font: bold;
+}
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  #back{
+      display: block;
+  }
+
+  #solution {
+      display: none;
+  }
