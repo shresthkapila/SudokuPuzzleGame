@@ -44,7 +44,7 @@ function check() {
         document.getElementById('message').innerHTML = "HINT: Go ahead click more to win the game";
     } 
     else if (act == true && inact == true) {
-        document.getElementById('message').innerHTML = "CONGRATULATIONS";
+        document.getElementById('message').innerHTML = "CONGRATULATIONS!!!";
     }
     else if (act == true && inact == false) {
         document.getElementById('message').innerHTML = "HINT: Clicked more!! Reduce some clicks to win";
