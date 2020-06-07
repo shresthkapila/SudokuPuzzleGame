@@ -6,5 +6,6 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('public/mypuzzlegame.html'))
+  .get('/', (req, res) => res.sendfile('public/mypuzzlegame.html'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
