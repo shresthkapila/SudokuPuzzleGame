@@ -45,6 +45,7 @@ function check() {
     } 
     else if (act == true && inact == true) {
         document.getElementById('message').innerHTML = "CONGRATULATIONS!!!";
+        window.alert("CONGRATULATIONS!!! YOU WON")
     }
     else if (act == true && inact == false) {
         document.getElementById('message').innerHTML = "HINT: Clicked more!! Reduce some clicks to win";
