@@ -149,3 +149,21 @@ button:hover{
     right: 0;
     top: 3;
 }
+
+#side2{
+    width: 30%;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    position: fixed;
+    float: right;
+    right: 0;
+    bottom: 1;
+}
+
+#won {
+    width: 100%;
+    float: right;
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+}

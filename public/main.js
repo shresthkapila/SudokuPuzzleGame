@@ -46,6 +46,7 @@ function check() {
     else if (act == true && inact == true) {
         document.getElementById('message').innerHTML = "CONGRATULATIONS!!!";
         window.alert("CONGRATULATIONS!!! YOU WON")
+        document.getElementById('won').src = "images/giphy.gif";
     }
     else if (act == true && inact == false) {
         document.getElementById('message').innerHTML = "HINT: Clicked more!! Reduce some clicks to win";
@@ -154,3 +155,5 @@ function manageNavs(evt, cityname) {
     document.getElementById(cityname).style.display = "block";
     evt.currentTarget.className += " active";
     }
+
+
