@@ -67,11 +67,11 @@ function checkAllActive() {
     var allActiveButtons = document.getElementsByClassName('active');
 
     for (var i = 0; i < allActiveButtons.length; i++) {
-        if (allActiveButtons[i].innerHTML == 0) {
-            flag = false;
+        if (allActiveButtons[i].innerHTML == 1) {
+            flag = true;
         }
         else {
-            flag = true;
+            flag = false;
             break;
         }
     }
