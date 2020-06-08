@@ -1,7 +1,7 @@
 var flag = false;
 var flag2 = false;
 
-document.querySelectorAll('.inactive').forEach(function(e) {
+document.querySelectorAll('.chan').forEach(function(e) {
     e.addEventListener('click', function(){
         if (this.style.backgroundColor == "white") {
             this.style.backgroundColor = "red";
@@ -18,7 +18,7 @@ document.querySelectorAll('.inactive').forEach(function(e) {
     })
 });
 
-document.querySelectorAll('.active').forEach(function(e) {
+document.querySelectorAll('.bobby').forEach(function(e) {
     e.addEventListener('click', function(){
         if (this.style.backgroundColor == "white") {
             this.style.backgroundColor = "red";
@@ -64,7 +64,7 @@ function check() {
 }
 
 function checkAllActive() {
-    var allActiveButtons = document.getElementsByClassName('active');
+    var allActiveButtons = document.getElementsByClassName('bobby');
 
     for (var i = 0; i < allActiveButtons.length; i++) {
         if (allActiveButtons[i].innerHTML == 1) {
@@ -79,7 +79,7 @@ function checkAllActive() {
 }
 
 function checkAllInactive() {
-    var allInactiveButtons = document.getElementsByClassName('inactive');
+    var allInactiveButtons = document.getElementsByClassName('chan');
     for (var i = 0; i < allInactiveButtons.length; i++) {
         if (allInactiveButtons[i].innerHTML == 0) {
             flag2 = true;
