@@ -7,13 +7,13 @@ document.querySelectorAll('.inactive').forEach(function(e) {
             this.style.backgroundColor = "red";
             this.style.color = "red";
             this.innerHTML = "1";
-            check();
+            // check();
         }
         else {
             this.style.backgroundColor = "white";
             this.style.color = "white"
             this.innerHTML = "0";
-            check();
+            // check();
         }
     })
 });
@@ -24,13 +24,13 @@ document.querySelectorAll('.active').forEach(function(e) {
             this.style.backgroundColor = "red";
             this.style.color = "red";
             this.innerHTML = "1";
-            check();
+            // check();
         }
         else {
             this.style.backgroundColor = "white";
             this.style.color = "white"
             this.innerHTML = "0";
-            check();
+            // check();
         }
     })
 });
@@ -45,15 +45,15 @@ function check() {
         document.getElementById('won').src = "images/giphy.gif"
     }
     else if (act == false && inact == false) {
-        document.getElementById('message').innerHTML = "HINT: Go ahead click more to win the game";
+        document.getElementById('message').innerHTML = "Not yet: Go ahead click more to win the game";
         document.getElementById('won').src = "images/giphy2.gif"
     }
     else if (act == true && inact == false) {
-        document.getElementById('message').innerHTML = "HINT: Clicked more!! Reduce some clicks to win";
+        document.getElementById('message').innerHTML = "Not yet: Clicked more!! Reduce some clicks to win";
         document.getElementById('won').src = "images/giphy2.gif"
     }
     else if (act == false && inact == true) {
-        document.getElementById('message').innerHTML = "HINT: Some of the correct ones are left...Keep going!!";
+        document.getElementById('message').innerHTML = "Not yet: Some of the correct ones are left...Keep going!!";
         document.getElementById('won').src = "images/giphy2.gif"
     }
     else {
