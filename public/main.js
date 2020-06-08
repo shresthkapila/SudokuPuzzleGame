@@ -39,10 +39,15 @@ function check() {
     var act = checkAllActive();
     var inact = checkAllInactive();
    
-    if (act == false && inact == false) {
+    if (act == true && inact == true) {
+        document.getElementById('message').innerHTML = "CONGRATULATIONS!!!";
+        window.alert("CONGRATULATIONS!!! YOU WON")
+        document.getElementById('won').src = "images/giphy.gif"
+    }
+    else if (act == false && inact == false) {
         document.getElementById('message').innerHTML = "HINT: Go ahead click more to win the game";
         document.getElementById('won').src = "images/giphy2.gif"
-    } 
+    }
     else if (act == true && inact == true) {
         document.getElementById('message').innerHTML = "CONGRATULATIONS!!!";
         window.alert("CONGRATULATIONS!!! YOU WON")
@@ -156,4 +161,3 @@ function manageNavs(evt, cityname) {
     document.getElementById(cityname).style.display = "block";
     evt.currentTarget.className += " active";
     }
-
