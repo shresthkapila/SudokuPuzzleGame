@@ -42,24 +42,27 @@ function check() {
    
     if (act == false && inact == false) {
         document.getElementById('message').innerHTML = "HINT: Go ahead click more to win the game";
+        document.getElementById('won').src = "images/giphy2.gif"
     } 
     else if (act == true && inact == true) {
         document.getElementById('message').innerHTML = "CONGRATULATIONS!!!";
         window.alert("CONGRATULATIONS!!! YOU WON")
-        document.getElementById('won').src = "images/giphy.gif";
+        document.getElementById('won').src = "images/giphy.gif"
     }
     else if (act == true && inact == false) {
         document.getElementById('message').innerHTML = "HINT: Clicked more!! Reduce some clicks to win";
+        document.getElementById('won').src = "images/giphy2.gif"
     }
     else if (act == false && inact == true) {
         document.getElementById('message').innerHTML = "HINT: Some of the correct ones are left...Keep going!!";
+        document.getElementById('won').src = "images/giphy2.gif"
     }
     else {
         document.getElementById('message').innerHTML = "Nice!! Keep going";
+        document.getElementById('won').src = "images/giphy2.gif"
     }
     return;   
 }
-
 
 function checkAllActive() {
     var allActiveButtons = document.getElementsByClassName('active');
@@ -138,7 +141,6 @@ function refreshPage() {
 
     }
 
-
 function manageNavs(evt, cityname) {
     var i, tabcontent, tablinks;
     
@@ -155,5 +157,3 @@ function manageNavs(evt, cityname) {
     document.getElementById(cityname).style.display = "block";
     evt.currentTarget.className += " active";
     }
-
-

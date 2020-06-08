@@ -1,5 +1,5 @@
 table{
-    background-color: darkgoldenrod;
+    background-color: #F2AA4CFF;
     border-collapse: collapse;
     width: 100%;
     table-layout: auto;
@@ -127,12 +127,17 @@ button:hover{
     padding-left: 15px;
     margin-left: 15px;
     float: right;
-    font-style: italic;
-    background-color: darkgoldenrod;
+    /* font-style: italic; */
+    background-color: #F2AA4CFF;;
     color: black;
     border-collapse: collapse;
     top: 3;
     right: 0;
+}
+
+span{
+    color: red;
+    font-style: italic;
 }
 
 #message {
