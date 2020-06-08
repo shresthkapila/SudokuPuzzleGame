@@ -3,13 +3,15 @@ table{
     border-collapse: collapse;
     width: 100%;
     table-layout: auto;
-    padding: 6px 12px;
+    /* padding: 6px 12px; */
     border: 1px solid #ccc;
+    left: 0%;
+    top: 10%;
 }
 
 td{
     border: 2px solid black;
-    padding:0px;
+    padding:0%;
     width: 5%;
     font-weight: bold;
 }
@@ -33,11 +35,13 @@ button{
 }
 
 #back{
-    position: absolute;
+    position: fixed;
     display: block;
     float: left;
     padding: 6px 12px;
     border: 1px solid #ccc;
+    left: 0%;
+    top: 10%;
 }
 
 #reset {
@@ -101,13 +105,13 @@ button:hover{
 }
   
 
-.tabcontent {
+/* .tabcontent {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
     border-collapse: collapse;
     float: left;
-}
+} */
 
 #solution {
     display: none;
@@ -125,14 +129,14 @@ button:hover{
 
 #box1 {
     padding-left: 15px;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     float: right;
     /* font-style: italic; */
     background-color: #F2AA4CFF;;
     color: black;
     border-collapse: collapse;
-    top: 3;
-    right: 0;
+    top: 3%;
+    right: 0%;
 }
 
 span{
@@ -151,11 +155,11 @@ span{
     border: 1px solid #ccc;
     position: fixed;
     float: right;
-    right: 0;
-    top: 3;
+    right: 0%;
+    top: 10%;
 }
 
-#side2{
+/* #side2{
     width: 30%;
     padding: 6px 12px;
     border: 1px solid #ccc;
@@ -163,12 +167,12 @@ span{
     float: right;
     right: 0;
     bottom: 1;
-}
+} */
 
 #won {
     width: 100%;
     float: right;
     position: fixed;
-    right: 10px;
-    bottom: 30px;
+    right: 0%;
+    bottom: 5%;
 }
