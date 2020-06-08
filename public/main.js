@@ -1,4 +1,3 @@
-// global variable
 var flag = false;
 var flag2 = false;
 
@@ -157,3 +156,4 @@ function manageNavs(evt, cityname) {
     document.getElementById(cityname).style.display = "block";
     evt.currentTarget.className += " active";
     }
+
